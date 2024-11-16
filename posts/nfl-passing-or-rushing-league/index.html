@@ -236,8 +236,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Rushing Yards"</span>, <span class="at">y =</span> <span class="st">"Receiving Yards"</span>,</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The NFL lacks consistency on the run game"</span>,</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The 2010s emphasized offense in the air more than the 2000s, especially in the mid-2010s."</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"NFL offenses lack consistency on the run game"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2020 was probably the most balanced year between both offenses ever."</span>,</span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
@@ -291,7 +291,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>As we look at the two decades of football, the 2000s show that they emphasize the run game a lot more and there isn’t much difference between the yards in the air or on the ground. The 2010s, however, were all over the place.</p>
-<p>(WHAT WAS GOING ON IN THE NFL AT THAT TIME???)</p>
+<p>According to <a href="https://www.foxsports.com/stories/nfl/the-nfls-offense-of-the-decade/">Fox Sports</a>, the 2010s offense was solely in the air. This can be proven by many teams’ offensive statistics. The teams that were noted were the 2011 New Orleans Saints, 2011 Green Bay Packers, 2013 Denver Broncos, 2016 Atlanta Falcons, 2018 Kansas City Chiefs, and 2019 Baltimore Ravens. By itself, the Falcons’ Super Bowl LI run in 2016 had quarterback Matt Ryan throwing for almost 5,000 yards and 38 touchdowns in the regular season with the offense the highest grade offense since in the 2010s at 94.1. That is very impressive.</p>
+<p>This leads to the next question: how much did the rushing and passing game change by year? In order to see the dip in rushing and rise in passing offense, we need to see each year side by side.</p>
 <p>The 2000s will be colored Rosso Corsa and the 2010s will be colored Dark Midnight Blue.</p>
 <div class="cell">
 <details class="code-fold">
@@ -303,15 +304,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">&gt;=</span> <span class="dv">2011</span> <span class="sc">&amp;</span> Year <span class="sc">&lt;=</span> <span class="dv">2020</span>)</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>nfl, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadeone, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"#d50a0a"</span>) <span class="sc">+</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadetwo, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"#013369"</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>nfl, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadeone, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"#d50a0a"</span>) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadetwo, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"#013369"</span>) <span class="sc">+</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Rushing Yards"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Receiving Yards"</span>,</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Rushing Yards"</span>,</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The run game failed in the 2010s"</span>,</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2004 had gained more yards while 2020 struggled to move the ball per attempt."</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Receiving Yards"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The pass game is surprisingly consistent the last two decades"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The pass game's effectiveness drops in 2017 but the next few years picked up the slack."</span>,</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
@@ -333,19 +334,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>We love our big pass plays now, they’re a lot more exciting to watch. Is the NFL trying to push for this kind of offense, just so it can get more clicks for crazy highlights by wide receivers? Maybe, but maybe there is something else to this.</p>
+<p>Let’s look at the run game throughout the last two decades.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>nfl, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadeone, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"#d50a0a"</span>) <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadetwo, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>ReceivingYards), <span class="at">color=</span><span class="st">"#013369"</span>) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>nfl, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadeone, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"#d50a0a"</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>decadetwo, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>RushingYards), <span class="at">color=</span><span class="st">"#013369"</span>) <span class="sc">+</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Receiving Yards"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Rushing Yards"</span>,</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Receiving Yards"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Offense in the air consistently grows each year"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2017 dropped the passing game's effectiveness but picked back up."</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Rushing Yards"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The run game was not the top priority in the 2010s"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The mid-2010s had dropped productivity as low as 2001, which hadn't been seen in a decade."</span>,</span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
@@ -367,8 +370,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>However, when we look at both decades, there are some years that did better than others.</p>
-<p>Then this begs the question: where does each team rank individually with their rushing and receiving yards?</p>
+<p>If you were a running back in the mid-2010s, you were not getting enough love. Luckily, it looks like the trend for rushing is going up slowly. Fortunately, there is an explanation for this.</p>
+<p><a href="https://operations.nfl.com/gameday/analytics/stats-articles/how-defensive-schemes-are-shaping-the-nfls-passing-game-in-2024/">NFL Football Operations</a> explain that in recent seasons, the passing yards per game is slowly dropped from 496 in 2020 to 403 in 2024. This means that defenses across the league have slowly adjusted to the passing game. Defenses have embraced Cover 2, Cover 4, and Cover 6, and defenders are lining up farther back than in 2019. If this trend continues, maybe the NFL moves back to a more dominant rush league.</p>
+<p>However, every year is different than each other and random things occur, affecting both the run and passing games. There are some years that did better than others. This begs the question: where does each year rank individually with their rushing and receiving yards?</p>
+<p>The receiving yards will be colored Rosso Corsa and the rushing yards will be colored Dark Midnight Blue.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -397,8 +402,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Season Yards"</span>,</span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Season Yards"</span>,</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2020 balanced rushing and receiving yards"</span>,</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The 2010s dominate receiving yards compared to the 2000s."</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The 2010s dominate receiving yards compared to the 2000s"</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Regardless of how stagnant the run game is, the NFL tried throwing the ball more."</span>,</span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
@@ -418,7 +423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>But what about each years’ efficiency on both rushing and receiving yards? Surely the better year would have more yards per attempt on both sides of offense.</p>
+<p>Once again, the 2010s dominate the top spots. But what about each years’ offensive efficiency? Surely the years with the most yards have the best yards per attempt rate on both sides of offense.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -447,8 +452,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yards Per Attempt"</span>,</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Yards Per Attempt"</span>,</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2011 achieved more yards per attempt on both sides"</span>,</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2004 gained more yards on average compared to 2020 per attempt."</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2011 was the most efficient year"</span>,</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2004 gained more yards per attempt on average compared to 2020."</span>,</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma, <span class="at">breaks=</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>)) <span class="sc">+</span></span>
@@ -468,8 +473,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>It’s safe to say that 2004, while not having as many rushing yards compared to the 2010s, was a very effective year.</p>
-<p>While the total yards for rushing and receiving yards changes every year, recently there has been in increase in receiving yards and a steady consistency for the run game. The run game has increased but it is outpaced by the pass game.</p>
+<p>Just because you try throw or run the ball more, doesn’t always mean it is as effective. If 2011 is the most effective year for the pass game, maybe former Green Bay quarterback Aaron Rodgers and the 2011 Packers could be argued as one of, if not, the most efficient offense in all of NFL history.</p>
+<p>One thing is for certain: nothing is ever consistent. Eventually, the defense will figure it out, and then it’s back to the drawing board.</p>
 
 
 
