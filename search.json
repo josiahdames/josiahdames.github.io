@@ -18,6 +18,13 @@
     "href": "index.html",
     "title": "DamesSportsBlog",
     "section": "",
-    "text": "Is the NFL a passing league or a rushing league?\n\n\n\n\n\n\nNFL\n\n\n\n\n\n\n\n\n\nNov 17, 2024\n\n\nJosiah Dames\n\n\n\n\n\n\nNo matching items"
+    "text": "Are the 1972 Dolphins just as good as other historically great teams?\n\n\n\n\n\n\nNFL\n\n\n\n\n\n\n\n\n\nDec 8, 2024\n\n\nJosiah Dames\n\n\n\n\n\n\n\n\n\n\n\n\nIs the NFL a passing league or a rushing league?\n\n\n\n\n\n\nNFL\n\n\n\n\n\n\n\n\n\nNov 17, 2024\n\n\nJosiah Dames\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/are-the-1972-dolphins-good/index.html",
+    "href": "posts/are-the-1972-dolphins-good/index.html",
+    "title": "Are the 1972 Dolphins just as good as other historically great teams?",
+    "section": "",
+    "text": "Here is some background stuff about the 1972 Dolphins.\n\n\nCode\nlibrary(tidyverse)\nlibrary(ggrepel)\nlibrary(readr)\nlibrary(ggplot2)"
   }
 ]
