@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Josiah Dames">
-<meta name="dcterms.date" content="2024-12-08">
+<meta name="dcterms.date" content="2024-12-09">
 
 <title>Are the 1972 Dolphins just as good as other historically great teams? – Josiah’s Sports Data Collection</title>
 <style>
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 8, 2024</p>
+        <p class="date">December 9, 2024</p>
       </div>
     </div>
     
@@ -191,9 +191,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The 1972 Dolphins are the only team in NFL history to go undefeated and win the Super Bowl the same year. Led by quarterback Bob Griese and head coach Don Shula, the Dolphins did the impossible and no one has even been close to breaking that record, with the exception of the 2007 New England Patriots.</p>
 <p>While the ’72 Dolphins were regarded as one of the best teams in NFL history, that doesn’t always mean that they were the “best” team statistically. There are some teams, like the 1985 Chicago Bears, who didn’t have a great offense but were carried by the defense.</p>
 <p>If the ’72 Dolphins were that good, how do they compared with other great teams in NFL history? The league has changed a lot in the last 50 years. But before we answer that question, what about the other ’72 teams?</p>
-<p>The <a href="https://www.pro-football-reference.com/years/NFL/rushing.htm">Pro Football Reference’s</a> “Team Offense” statistics show each seasons’s offense, including yards, completions, yards per play, and points.</p>
-<p>To determine if the ’72 Dolphins were a great team, we must look at if they are even the best team that year statistically. (Talk about what information you’re putting into the graphs).</p>
-<p>BUBBLE CHART</p>
+<p>The <a href="https://www.pro-football-reference.com/years/NFL/rushing.htm">Pro Football Reference’s</a> “Team Offense” statistics show each season’s offense, including passing yards, completions, yards per play, and points for.</p>
+<p>To determine if the ’72 Dolphins were a great team, we must look at if they are even the best team that year statistically. The tables only look at the regular season.</p>
+<p>We will divide completions by passing attempts to create a factor called “Completion Percentage.” This will show how efficient each team in the 1972 season was compared to the Miami Dolphins that year. The more completions there are per attempt, the higher the completion percentage.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -307,7 +307,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">==</span> <span class="st">"Kansas City Chiefs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>BUBBLE CHART (1972)</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -341,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Yards"</span>, <span class="at">y =</span> <span class="st">"Points Scored By Team"</span>,</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '72 Dolphins were by far the best team in the league"</span>,</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"They dominated all three categories of total yards, points scored, and completion percentages."</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"They were in a league of their own in all three categories."</span>,</span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
@@ -396,7 +395,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>BUBBLE CHART 2 (EVERY GOOD TEAM)</p>
+<p>Looking at all the 1972 teams, the Dolphins are statistically one of-if not the best-teams that season. As expected, the team that is arguably a great team that season should go on to win the Super Bowl.</p>
+<p>But how does the ’72 Miami Dolphins compare to other great teams? Looking throughout NFL history, there are many teams that stand out. These are some of those teams that will be compared to the Miami Dolphins: the 1985 San Diego Chargers, the 1990 Buffalo Bills, the 1998 Minnesota Vikings, the 1999 St.&nbsp;Louis Rams, the 2007 New England Patriots, the 2011 Green Bay Packers, the 2013 Denver Broncos, the 2016 Falcons, and the 2018 Kansas City Chiefs.</p>
+<p>Using the same metric as before, we will compare the ’72 Dolphins and these teams.</p>
+<p>Just as a reminder, the 1972 Dolphins played two games less during the regular season compared to the other teams.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -492,8 +494,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Yards"</span>, <span class="at">y =</span> <span class="st">"Points Scored By Team"</span>,</span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '72 Dolphins are way behind every other team"</span>,</span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The 2013 Denver Broncos led the charge in total yards, points scored, and completion percentage."</span>,</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The 2013 Denver Broncos led the charge"</span>,</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The '72 Dolphins struggled to keep up with the other great teams in NFL history."</span>,</span>
 <span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
@@ -548,7 +550,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>PASSING TABLE</p>
+<p>While they did have a disadvantage, the 1972 did not have a great completion percentage. The 2013 Denver Broncos is arguably one of the best offenses the NFL has seen yet, according to this data.</p>
+<p>This can be confirmed too by just looking at their roster. Veteran quarterback Peyton Manning was leading the charge with Knowshon Mereno as the lead running back and wide receivers such as Eric Decker, Demaryius Thomas, and Wes Welker. The 2013 Broncos did make it to the Super Bowl that season, but they ran into the Seattle Seahawks’ Legion of Boom.</p>
+<p>While the Broncos are truly impressive, the completion percentage only looks at one detail. How many touchdowns were scored by the offenses through the air? How many interceptions did each team have?</p>
+<p>All passing offense statistics from the ten great teams will be put together in a table.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -567,8 +572,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Int =</span> <span class="st">"Interceptions"</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '72 Dolphins are the worst in the passing game"</span>,</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The '13 Denver Broncos dominate the passing game and have the most touchdowns."</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '13 Broncos are the best team regarding the passing game"</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Miami's total interceptions show that they prefered to not throw the ball."</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> <span class="fu">tab_style</span>(</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
@@ -1069,10 +1074,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header gt_heading">
-<th colspan="8" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">The '72 Dolphins are the worst in the passing game</th>
+<th colspan="8" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">The '13 Broncos are the best team regarding the passing game</th>
 </tr>
 <tr class="odd gt_heading">
-<th colspan="8" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">The '13 Denver Broncos dominate the passing game and have the most touchdowns.</th>
+<th colspan="8" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">Miami's total interceptions show that they prefered to not throw the ball.</th>
 </tr>
 <tr class="header gt_col_headings">
 <th id="Year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Year</th>
@@ -1197,7 +1202,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>RUSHING TABLE</p>
+<p>As expected, the Broncos prove to be making their claim as one of the best offenses in NFL history. They had five touchdowns and almost 500 passing yards more than the 2018 Kansas City Chiefs. That 2018 Chiefs team is argued to be one of the best offenses from the Patrick Mahomes era, even NFL history.</p>
+<p>Throughout the NFL’s history, certain teams rely on certain kinds of offense, whether it’d be the passing or running game.</p>
+<p>Let’s look at the running game for the ten teams. If the 2013 Broncos were truly the best offense in NFL history, this also should mean they were great on the ground.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1214,8 +1221,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">RushYdsPerAtt =</span> <span class="st">"Rushing Yards Per Attempt"</span></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The run game is where the '72 Dolphins shined"</span>,</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"They had the most rushing yards per attempt and the most rushing touchdowns."</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The running game is where the '72 Dolphins shined"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"It seems that the closer we get to today, the less total rushing yards you will have."</span></span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> <span class="fu">tab_style</span>(</span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
@@ -1714,10 +1721,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header gt_heading">
-<th colspan="6" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">The run game is where the '72 Dolphins shined</th>
+<th colspan="6" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">The running game is where the '72 Dolphins shined</th>
 </tr>
 <tr class="odd gt_heading">
-<th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">They had the most rushing yards per attempt and the most rushing touchdowns.</th>
+<th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">It seems that the closer we get to today, the less total rushing yards you will have.</th>
 </tr>
 <tr class="header gt_col_headings">
 <th id="Year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Year</th>
@@ -1820,7 +1827,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>PENALTY BAR CHARTS</p>
+<p>Interesting. While the 2013 Broncos didn’t have that good of a rushing offense, the 1972 Dolphins definitely did. Almost 900 more rushing yards and six more touchdowns than the next team is a great achievement. Just as reminder, this Dolphins team played two less games than the rest of these teams. If they played the same amount of games, it is very likely the 1972 Miami Dolphins could’ve had over 3,000 rushing yards and around 30 total rushing touchdowns.</p>
+<p>There is one factor that makes offensive production halt: penalties.</p>
+<p>Being penalized kills offensive momentum, and could potentially change the effectiveness of an offense.</p>
+<p>Let’s look at the number of penalties and the total penalty yards give to each team.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1856,8 +1866,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>bar1 <span class="sc">/</span> bar2 <span class="sc">+</span></span>
 <span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '72 Dolphins were the least penalized team"</span>,</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The 2018 Chiefs was the most penalized team among these teams."</span>,</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The '18 Chiefs could not stop making mistakes"</span>,</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The Dolphins could be argued as the most effective team in not getting penalties in the NFL."</span>,</span>
 <span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Pro Football Reference | By: Josiah Dames"</span></span>
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">&amp;</span></span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
@@ -1876,6 +1886,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>The ’72 Dolphins had 68 total penalties with around 700 penalty yards. Compared to the other nine teams, it looks like Miami was pretty good about not getting the zebras involved.</p>
+<p>With all of these statistics considered, it seems like the 1972 Miami Dolphins were one of the best teams overall in NFL history. While they struggle in some areas, they made up for it in other areas. Each decade, even each year, can bring a new era of football. None of these seasons have the same styles of offense because defenses over time adapt to the offense. The ’72 Dolphins were really good at the running game and that can be attributed to their undefeated season.</p>
+<p>While the ’72 Dolphins were not great in the passing game like the ’13 Broncos or the ’18 Chiefs, that Dolphins team can say one thing: they at least won the Super Bowl. The only other “best” team that won their season’s Super Bowl was the 1999 St.&nbsp;Louis Rams. The ’99 Rams also relied on the running game more. Maybe Super Bowls are won by the team that has a better ground game.</p>
 
 
 
